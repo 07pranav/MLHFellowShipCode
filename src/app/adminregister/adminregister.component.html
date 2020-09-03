@@ -1,0 +1,18 @@
+<h1> Register for Admin Here</h1>
+
+<form #f="ngForm" (ngSubmit)="submits(f.value)">
+   
+   <div class="form-group">
+    <label for="email">email</label>
+    <input required ngModel   name="email" #email="ngModel" (change)="logx(email)" id="email" type="text" class="form-control" >
+   </div>
+   <div class="form-group">
+    <label for="password">password</label>
+    <input required ngModel   name="password" #password="ngModel" (change)="logx(password)" id="password" type="text" class="form-control" >
+   </div>
+ 
+    <p>
+        {{f.value | json}}
+    </p>
+<button class="btn btn-primary"[disabled]="f.invalid">submit</button>
+</form>

@@ -1,0 +1,190 @@
+body,
+    html {
+        margin: 0;
+        padding: 0;
+        height: 103.6%;
+        background: #60a3bc !important;
+    }
+    .user_card {
+        height: 350px;
+        width: 400px;
+        margin-top: auto;
+        margin-bottom: auto;
+        background: #FFFFFF;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 10px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border-radius: 5px;
+
+    }
+    .brand_logo_container {
+        position: absolute;
+        height: 170px;
+        width: 170px;
+        top: -75px;
+        border-radius: 50%;
+        background: #60a3bc;
+        padding: 10px;
+        text-align: center;
+    }
+    .brand_logo {
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        border: 2px solid white;
+    }
+    .form_container {
+        margin-top: 100px;
+    }
+    .login_btn {
+        width: 100%;
+        /* background: #c0392b !important; */
+        background: #79cff1 !important;
+        color: white !important;
+    }
+    .login_btn:focus {
+        box-shadow: none !important;
+        outline: 0px !important;
+    }
+    .login_container {
+        padding: 0 2rem;
+    }
+    .input-group-text {
+        background: #79cff1 !important;
+        color: white !important;
+        border: 0 !important;
+        width: 125%;
+        border-radius: 0.50rem 0 0 0.50rem !important;
+    }
+    .input_user,
+    .input_pass:focus {
+        box-shadow: none !important;
+        outline: 0px !important;
+        width: 80%;
+    }
+    .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+        background-color: #c0392b !important;
+    }
+
+    .sign {
+        text-align: center;
+        padding-top: 10px;
+        /* color: #8C55AA; */
+        color: #60a3bc;
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: bold;
+        font-size: 23px;
+    
+    }
+
+/* .main {
+    background-color: #FFFFFF;
+    width: 420px;
+    height: 360px;
+    margin: 7em auto;
+    border-radius: 1.5em;
+    box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+   padding-left: 10px;
+    padding-top: 30px;
+    padding-right: 10px;
+  
+}
+
+.sign {
+    text-align: center;
+    padding-top: 40px;
+    color: #8C55AA;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    font-size: 23px;
+
+}
+
+.un {
+    text-align: center;
+width: 70%;
+color: rgb(38, 50, 56);
+font-weight: 700;
+font-size: 14px;
+letter-spacing: 1px;
+background: rgba(136, 126, 126, 0.04);
+padding: 10px 20px;
+border: none;
+border-radius: 20px;
+outline: none;
+box-sizing: border-box;
+border: 2px solid rgba(0, 0, 0, 0.02);
+margin-bottom: 50px;
+margin-left: 46px;
+text-align: center;
+margin-bottom: 27px;
+font-family: 'Ubuntu', sans-serif;
+}
+
+
+.pass {
+    text-align: center;
+        width: 76%;
+color: rgb(38, 50, 56);
+font-weight: 700;
+font-size: 14px;
+letter-spacing: 1px;
+background: rgba(136, 126, 126, 0.04);
+padding: 10px 20px;
+border: none;
+border-radius: 20px;
+outline: none;
+box-sizing: border-box;
+border: 2px solid rgba(0, 0, 0, 0.02); 
+margin-bottom: 50px;
+margin-left: 46px;
+text-align: center;
+margin-bottom: 30px;
+font-family: 'Ubuntu', sans-serif;
+}
+
+
+.un:focus, .pass:focus {
+    border: 2px solid rgba(0, 0, 0, 0.18) !important;
+    
+}
+
+.submit {
+  cursor: pointer;
+    border-radius: 5em;
+    color: #fff;
+    background: linear-gradient(to right, #9C27B0, #E040FB);
+    border: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    margin-left: 35%;
+    font-size: 13px;
+    margin-top: 15px;;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+}
+
+.forgot {
+    text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
+    color: #E1BEE7;
+    padding-top: 15px;
+}
+
+a {
+    text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
+    color: #E1BEE7;
+    text-decoration: none
+}
+
+.out{
+    padding-top:10px;
+    background-color:  #d190dc3b;
+    padding-bottom: 400px;
+} */

@@ -1,0 +1,115 @@
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<form class="form-signin" #f="ngForm" (ngSubmit)="imageService.upload(f.value)">
+  <div>
+    <i class="fa fa-cloud-upload fa-5x" id="UploadIcon" aria-hidden="true"></i>
+    <br>
+    <label class="image-upload-container btn btn-bwm">
+      <input required #imageInput id="image" type="file" accept="image/*" (change)="processFile(imageInput)">
+    </label>
+    <!-- <div class="alert alert-danger" *ngIf="image.touched && !image.valid">
+      <div *ngIf="image.errors.required">Image is Required.</div>  
+  </div> -->
+  </div>
+
+  <br>
+
+  <div>
+    <label for="Tag" class="sr-only">Tags</label>
+    <select type="text" id="Tag" name="Tags" #Tag="ngModel" ngModel class="form-control" required autofocus>
+      <option required value="News" selected>News</option>
+      <option required value="Gallery">Gallery</option>
+      <option required value="Events">Events</option>
+    </select>
+    <div class="alert alert-danger" *ngIf="Tag.touched && !Tag.valid">
+      <div *ngIf="Tag.errors.required">Tag is Required.</div>
+    </div>
+    <span>
+      <p>Tag defines where you want to show this image to User</p>
+    </span>
+  </div>
+
+  <div>
+    <label for="Description" class="sr-only">Description</label>
+    <textarea required type="text" id="Description" #Description="ngModel" name="Description" ngModel class="form-control"
+      cols="200" rows="5" placeholder="Description" required autofocus></textarea>
+      <div class="alert alert-danger" *ngIf="Description.touched && !Description.valid">
+        <div *ngIf="Description.errors.required">Description is Required.</div>
+      </div>
+    <span>
+      <p>Description for your File</p>
+    </span>
+  </div>
+
+  <button class="btn btn-lg btn-primary btn-block" [disabled]="f.invalid" type="submit" id="upload">Upload</button>
+</form>
+
+<div *ngIf="selectedFile" class="img-preview-container">
+
+  <div class="img-preview{{selectedFile.status === 'fail' ? '-error' : ''}}"
+    [ngStyle]="{'background-image': 'url('+ selectedFile.src + ')'}">
+  </div>
+
+  <div *ngIf="selectedFile.pending" class="img-loading-overlay">
+    <div class="img-spinning-circle"></div>
+  </div>
+
+  <div *ngIf="selectedFile.status === 'ok'" class="alert alert-success"> Image Uploaded Succesfuly!</div>
+  <div *ngIf="selectedFile.status === 'fail'" class="alert alert-danger"> Image Upload Failed!</div>
+</div>
+<div>
+  <footer class="container">
+
+    <p class="float-right"><a routerLink="/adminall">Back to Dashboard</a></p>
+
+  </footer>
+</div>
+
+
+
+
+
+
+
+
+<!-- <p>imagepost works!</p>
+<label class="image-upload-container btn btn-bwm">
+  <span>Select Image</span>
+  <input #imageInput type="file" accept="image/*" (change)="processFile(imageInput)">
+</label>
+<form class="form-signin" #f="ngForm" (ngSubmit)="imageService.upload(f.value)">
+  <label for="inputEmail" class="sr-only">tags</label>
+  
+  <select required ngModel type="text" id="inputEmail" name="Tags" ngModel class="form-control" placeholder="tag"
+    required autofocus>
+    <option value="Gallery">Gallery</option>
+    <option value="Events">Events</option>
+    <option value="News">News</option>
+  </select>
+  
+  <label for="inputEmails" class="sr-only">Description</label>
+  <input type="text" id="inputEmails" name="Description" ngModel class="form-control" placeholder="name" required
+    autofocus>
+  <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+</form>
+<div *ngIf="selectedFile" class="img-preview-container">
+
+  <div class="img-preview{{selectedFile.status === 'fail' ? '-error' : ''}}"
+    [ngStyle]="{'background-image': 'url('+ selectedFile.src + ')'}">
+  </div>
+
+  <div *ngIf="selectedFile.pending" class="img-loading-overlay">
+    <div class="img-spinning-circle"></div>
+  </div>
+
+  <div *ngIf="selectedFile.status === 'ok'" class="alert alert-success"> Image Uploaded Succesfuly!</div>
+  <div *ngIf="selectedFile.status === 'fail'" class="alert alert-danger"> Image Upload Failed!</div>
+</div>
+<div>
+  <footer class="container">
+
+    <p class="float-right"><a routerLink="/adminall">Back to Dashbard</a></p>
+
+  </footer>
+</div> -->

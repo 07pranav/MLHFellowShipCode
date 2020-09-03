@@ -1,0 +1,68 @@
+<form class="form-signin" #f="ngForm" (ngSubmit)="signIn(f.value)">
+
+  <div>
+    <label for="Tag" class="sr-only">Tags</label>
+    <select type="text" id="Tag" name="Tag" #Tag="ngModel"
+    ngModel class="form-control" required autofocus>  
+    <option required value="News" selected>News</option>
+    <option required value="Gallery" >Gallery</option>
+    <option required value="Events">Events</option>
+    </select>
+    <div class="alert alert-danger" *ngIf="Tag.touched && !Tag.valid">
+      <div *ngIf="Tag.errors.required">Tag is Required.</div>  
+  </div>
+    <span><p>Tag defines where you want to show this image to User</p></span>
+  </div>
+  <div>
+     <label for="Name" class="sr-only">Title for Your File</label>
+    <input required type="text" id="Name" name="Name" #Name="ngModel" ngModel class="form-control" placeholder="Title for Your File" required autofocus>
+    <div class="alert alert-danger" *ngIf="Name.touched && !Name.valid">
+      <div *ngIf="Name.errors.required">Name is Required.</div>
+      </div>
+    <span><p>Please provide a suitable Title for Your Video</p></span>
+  </div>
+    <div class="form-group purple-border">
+        <label for="exampleFormControlTextarea4"> Url</label>
+        <textarea required class="form-control" id="exampleFormControlTextarea4" name="Url" #Url="ngModel" ngModel rows="3"></textarea>
+        <div class="alert alert-danger" *ngIf="Url.touched && !Url.valid">
+          <div *ngIf="Url.errors.required">Url is Required.</div>
+          </div>
+        <span><p>Please provide the Suitable url of Your File</p></span>   
+    </div>
+      
+    <button class="btn btn-lg btn-primary btn-block" [disabled]="f.invalid" type="submit" id="upload">Upload</button>
+  </form>
+  <div>
+    <footer class="container">
+  
+      <p class="float-right"><a routerLink="/adminall">Back to Dashboard</a></p>
+  
+    </footer>
+  </div>
+
+
+<!-- <p>video works!</p>
+<form class="form-signin" #f="ngForm" (ngSubmit)="signIn(f.value)">
+
+  <label for="inputEmail" class="sr-only">tag</label>
+  <select type="text" id="inputEmail" name="Tag" ngModel class="form-control" placeholder="tag" required autofocus>
+    <option value="Gallery">Gallery</option>
+    <option value="Events">Events</option>
+    <option value="News">News</option>
+  </select>
+  <label for="inputEmails" class="sr-only">name</label>
+  <input type="text" id="inputEmails" name="Name" ngModel class="form-control" placeholder="name" required autofocus>
+  <div class="form-group purple-border">
+    <label for="exampleFormControlTextarea4"> url</label>
+    <textarea class="form-control" id="exampleFormControlTextarea4" name="Url" ngModel rows="3"></textarea>
+  </div>
+
+  <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+</form>
+<div>
+  <footer class="container">
+
+    <p class="float-right"><a routerLink="/adminall">Back to Dashbard</a></p>
+
+  </footer>
+</div> -->

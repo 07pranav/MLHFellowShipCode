@@ -1,0 +1,30 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+form{
+    align-items: center;
+    border: solid 2px gray;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    padding: 50px;
+}
+#UploadIcon{
+    border: dotted 1px black;
+    height: 70px;
+    width: fit-content;
+    padding: 2px;
+}
+#Tag{
+    width: max-content;
+}
+
+#upload{
+    width: 25%;
+    height: 45px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+}

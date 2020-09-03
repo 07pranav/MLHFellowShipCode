@@ -1,0 +1,15 @@
+<!-- <p>forgotpasstwo works!</p>
+<form class="form-signin" #f="ngForm" (ngSubmit)="signInc()">
+
+    
+    <label for="newPassword" class="sr-only">newPassword</label>
+    <input type="text"  class="pass"  id="newPassword" name="newPassword" minlength="6" pattern="^$|^[A-Za-z0-9]+"  maxlength="15" ngModel class="form-control" #newPassword="ngModel" placeholder="newPassword" required>
+    <div *ngIf="newPassword.touched && !newPassword.valid">
+        <p *ngIf="newPassword.errors?.required">newPassword is a required field!</p>
+        <div *ngIf="newPassword.errors.minlength">newPassword must be atleast {{newPassword.errors.minlength.requiredLength}} characters.</div>
+        <div *ngIf="newPassword.errors.maxlength">newPassword can be maximum {{newPassword.errors.maximum.requiredLength}} characters.</div>
+        <p *ngIf="newPassword.errors?.pattern">Only Alphabets and Digits are allowed</p>
+    </div>
+    <button class="btn  btn-primary submit" type="submit">Click Here to Set a New Password</button>
+
+</form> -->

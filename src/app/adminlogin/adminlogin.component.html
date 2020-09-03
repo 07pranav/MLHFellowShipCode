@@ -1,0 +1,197 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<!DOCTYPE html>
+<html>
+    
+<head>
+	<title>My Awesome Login Page</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+</head>
+<!--Coded with love by Mutiullah Samim-->
+<body>
+	<div class="container h-100">
+		<div class="d-flex justify-content-center h-100">
+			<div class="user_card">
+				<div class="d-flex justify-content-center">
+					<div class="brand_logo_container">
+						<!-- <img src="https://cdn.freebiesupply.com/logos/large/2x/pinterest-circle-logo-png-transparent.png" class="brand_logo" alt="Logo"> -->
+            <img src="https://gumlet.assettype.com/nationalherald%2F2020-04%2F4e346322-fe56-4514-ab51-3bc6f3708022%2FEWT9a_pXYAA22jk.jpg?rect=1%2C0%2C789%2C444&auto=format%2Ccompress&w=400&dpr=2.6" class="brand_logo" alt="Logo">
+          </div>
+				</div>
+				<div class="d-flex justify-content-center form_container">
+					<form *ngIf="!dataservice.isLoggedInAdmin()" class="form-signin" #f="ngForm" (ngSubmit)="signIn(f.value)">
+            <h2 class="form-signin-heading sign">Admin Login</h2>
+            <div *ngIf="invalidLogin" class="alert alert-danger">Invalid username and/or password.</div>
+            <!-- <div class="text-center">
+              <b>Admin Login</b>
+            </div> -->
+						<div class="input-group mb-3">
+							<div class="input-group-append">
+								<span class="input-group-text"><i class="fas fa-user"></i></span>
+              </div>
+              <input required type="text" name="email" class="un" class="form-control input_user" value="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" id="email"
+              #email="ngModel" ngModel class="form-control" placeholder="Email address" >
+              <!-- <div class="alert alert-danger" *ngIf="email.touched && !email.valid"> -->
+                <div *ngIf="email.touched && !email.valid ">
+                  <div *ngIf="email.errors?.required">Email is a required field!</div>
+                  <div *ngIf="email.errors?.pattern">This is not a valid Email!!!</div>
+                </div>
+              </div>
+            
+              <div class="input-group mb-2">
+                <div class="input-group-append">
+                  <span class="input-group-text"><i class="fas fa-key"></i></span>
+                </div>
+                <input type="password" class="form-control input_pass" class="pass" id="password" name="password" minlength="6" pattern="^$|^[A-Za-z0-9]+"
+                maxlength="15" ngModel class="form-control" #password="ngModel" placeholder="Password" required>
+                <div *ngIf="password.touched && !password.valid">
+                  <div *ngIf="password.errors?.required">Password is a required field!</div>
+                  <div *ngIf="password.errors.minlength">Password must be atleast {{password.errors.minlength.requiredLength}}
+                    characters.</div>
+                  <div *ngIf="password.errors.maxlength">Password can be maximum {{password.errors.maximum.requiaredLength}}
+                    characters.</div>
+                  <div *ngIf="password.errors?.pattern">Only Alphabets and Digits are allowed</div>
+                  </div>
+                  </div>
+                  <div class="d-flex justify-content-center mt-3 login_container">
+                    <!-- <button [disabled]="f.invalid" type="button" name="button" class="btn login_btn">Login</button> -->
+                    <div class="form-group">
+                      <button [disabled]="f.invalid" class="btn btn-primary submit">Login</button>
+                    </div>
+                    </div>
+                  </form>
+			
+                    </div>
+                    <!-- <div class="mt-4">
+                      <div class="d-flex justify-content-center links">
+                        Don't have an account? <a routerLink="/register" class="ml-2">Sign Up</a>
+                      </div>
+                      <div class="d-flex justify-content-center links">
+                        <a routerLink="/forgotpassword">Forgot your password?</a>
+                      </div>
+                    </div> -->
+                  </div>
+                </div>
+              </div>
+            </body>
+            </html>
+
+
+
+
+<!-- <div class="out">
+  <div class="main">
+    <form *ngIf="!dataservice.isLoggedInAdmin()" class="form-signin" #f="ngForm" (ngSubmit)="signIn(f.value)">
+      <h2 class="form-signin-heading sign">Admin Login</h2>
+      <div *ngIf="invalidLogin" class="alert alert-danger">Invalid username and/or password.</div>
+
+      <label for="email" class="sr-only">Email address</label>
+      <input required type="text" class="un " pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" id="email" name="email"
+        #email="ngModel" ngModel class="form-control" placeholder="Email address" autofocus>
+      <div *ngIf="email.touched && !email.invalid ">
+        <p *ngIf="email.errors?.required">Email is a required field!</p>
+        <p *ngIf="email.errors?.pattern">This is not a valid Email!!!</p>
+      </div>
+
+      <br><br>
+      <label for="password" class="sr-only">Password</label>
+      <input type="text" class="pass" id="password" name="password" minlength="6" pattern="^$|^[A-Za-z0-9]+"
+        maxlength="15" ngModel class="form-control" #password="ngModel" placeholder="Password" required>
+      <div *ngIf="password.touched && !password.valid">
+        <p *ngIf="password.errors?.required">Password is a required field!</p>
+        <div *ngIf="password.errors.minlength">Password must be atleast {{password.errors.minlength.requiredLength}}
+          characters.</div>
+        <div *ngIf="password.errors.maxlength">Password can be maximum {{password.errors.maximum.requiredLength}}
+          characters.</div>
+        <p *ngIf="password.errors?.pattern">Only Alphabets and Digits are allowed</p>
+      </div>
+
+      <div class="form-group">
+        <button [disabled]="f.invalid" class="btn btn-primary submit">Login</button>
+      </div>
+       
+    </form> -->
+
+    <!-- <div *ngIf="dataservice.isLoggedInAdmin()" class="dash">
+      <h3 class="card-header text-center">Admin Access</h3>
+      <div>
+        <a class="btn  btn-primary submit" routerLink="/approval" role="button">approval</a>
+      </div>
+      <div>
+        <a class="btn btn-primary submit" routerLink="/content" role="button">image</a>
+      </div>
+      <div>
+        <a class="btn btn-primary submit" routerLink="/contentdel" role="button">&ensp; image del &nbsp; </a>
+      </div>
+      <div>
+        <a class="btn btn-primary submit" routerLink="/video" role="button">video</a>
+      </div>
+      <div>
+        <a class="btn btn-primary submit" routerLink="/videodel" role="button">&ensp; video del&nbsp; </a>
+      </div>
+      <div>
+        <a class="btn btn-primary submit" routerLink="/admindashboard" role="button">Admin Dashboard</a>
+      </div>
+      <div>
+        <a class="btn btn-primary submit" routerLink="/adminapproveform" role="button">Admin Approved Form</a>
+      </div>
+
+    </div>
+  -->
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- 
+
+
+<form class="form-signin" #f="ngForm" (ngSubmit)="signIn(f.value)">
+    <h2 class="form-signin-heading">Please sign in</h2>
+    <div *ngIf="invalidLogin" class="alert alert-danger">Invalid username and/or password.</div>
+    
+    <label for="email" class="sr-only">Email address</label>
+    <input required type="text"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" id="email" name="email" #email="ngModel" ngModel class="form-control" placeholder="Email address" autofocus>
+    <div *ngIf="email.touched && !email.invalid ">
+        <p *ngIf="email.errors?.required">Email is a required field!</p>
+        <p *ngIf="email.errors?.pattern">This is not a valid Email!!!</p>
+      </div>
+
+      <br><br>
+    <label for="password" class="sr-only">Password</label>
+    <input type="text" id="password" name="password" minlength="3" pattern="^$|^[A-Za-z0-9]+"  maxlength="15" ngModel class="form-control" #password="ngModel" placeholder="Password" required>
+    <div *ngIf="password.touched && !password.valid">
+        <p *ngIf="password.errors?.required">Password is a required field!</p>
+        <div *ngIf="password.errors.minlength">Password must be atleast {{password.errors.minlength.requiredLength}} characters.</div>
+        <div *ngIf="password.errors.maxlength">Password can be maximum {{password.errors.maximum.requiredLength}} characters.</div>
+        <p *ngIf="password.errors?.pattern">Only Alphabets and Digits are allowed</p>
+    </div>
+
+    <div class="form-group">
+        <button [disabled]="f.invalid" class="btn btn-primary">Login</button>
+        
+        <a routerLink="/adminregister" class="btn btn-link">Register</a>
+    </div>
+</form>
+
+<div class="card">
+    <h3 class="card-header text-center">DashBoard</h3>
+    <li class="text-center">
+      <a class="btn btn-sr btn-primary" routerLink="/approval" role="button">Approvals..</a>
+      <li class="text-center">
+        <a class="btn btn-sr btn-primary" routerLink="/feedback" role="button">content</a>
+        <li class="text-center">
+        <a class="btn btn-sr btn-primary" routerLink="/video" role="button">video</a>
+    </li> -->
